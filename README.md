@@ -35,9 +35,7 @@ This is a fully responsive, modern web application showcasing my projects, skill
 - npm run dev   
 
 ## 📁 Folder Structure
-css
-Copy
-Edit
+
 src/
 │
 ├── components/
