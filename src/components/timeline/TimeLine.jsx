@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import gsap from 'gsap';
 
 
-import './TimeLine.css';
+import './Timeline.css';
 const TimelineItem = ({ item }) => {
     const ref = useRef(null);
     const controls = useAnimation();
