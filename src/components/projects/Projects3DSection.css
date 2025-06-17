@@ -1,0 +1,170 @@
+.projects-section {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+    color: #fff;
+}
+
+.projects-title {
+    text-align: center;
+    font-size: 27rem;
+    margin-bottom: 2.5rem;
+    color: #7f5af0;
+    letter-spacing: 0.5px;
+    margin-left: -105px;
+
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card-3d {
+    background: #1b1b1b;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    transform: perspective(1000px) rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg));
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.project-image-wrap {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    color: #f5d300;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tech-badge {
+    background: #222;
+    color: #7f5af0;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.project-link {
+    color: #00ffa3;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.project-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #00ffa3;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.project-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .project-image-wrap {
+        height: 160px;
+    }
+
+    .project-desc {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-image-wrap {
+        height: 140px;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-title {
+        font-size: 4rem;
+
+    }
+
+}
+
+.project-card-3d {
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.project-shine {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.077), transparent);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projects-section {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    /* To ensure cards are not covered */
+}

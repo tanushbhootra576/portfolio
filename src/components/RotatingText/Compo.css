@@ -1,0 +1,12 @@
+.chat-compo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    width: 150px;
+    height: 95px;
+}
