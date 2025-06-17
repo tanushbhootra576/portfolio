@@ -1,6 +1,6 @@
 import SplitText from "./SplitText";
 import "./Landing.css";
-import ShinyText from "./Shinytext";
+import ShinyText from "./ShinyText";
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
