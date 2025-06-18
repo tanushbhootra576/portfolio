@@ -53,8 +53,8 @@ const projects = [
         description: "A simple fun game project based on React.",
         tech: ["NEXT.JS", "CSS3"],
         image: "/imgs/tictactoe.png",
-        link: "https://tic-tac-toe-drab-rho.vercel.app/",
-        github: "https://github.com/tanushbhootra576/TIC_TAC_TOE.git"
+        link: "https://game-orcin-rho.vercel.app/",
+        github: "https://github.com/tanushbhootra576/game.git"
     }
 ];
 
