@@ -25,12 +25,12 @@ const projects = [
         github: "https://github.com/tanushbhootra576"
     },
     {
-        title: "JurisAI",
-        description: "I and my friends Nirvik and Rakshith teamed up and made a chatbot that answers questions regarding cyber laws.",
-        tech: ["React", "CSS3", "MongoDB"],
-        image: "/imgs/JurisAI.png",
-        link: "https://jurisai-ochre.vercel.app/",
-        github: "https://github.com/tanushbhootra576/JurisAI.git"
+        title: "LenScape",
+        description: "A portforlio for landscape through my mobile lens ;).",
+        tech: ["HTML5", "CSS3", "JavaScript", "farmer-motion", "GSAP"],
+        image: "/imgs/LenScape.png",
+        link: "https://lenscape-i692.onrender.com/",
+        github: "https://github.com/tanushbhootra576/lenscape.git"
     },
     {
         title: "SKY-SCANr",
@@ -41,12 +41,12 @@ const projects = [
         github: "https://github.com/tanushbhootra576/SKY-SCANr.git"
     },
     {
-        title: "Restro",
-        description: "A simple React-based website for a restaurant.",
-        tech: ["HTML5", "CSS3", "JavaScript"],
-        image: "/imgs/Restro.png",
-        link: "https://restro-eta-three.vercel.app/",
-        github: "https://github.com/tanushbhootra576/RESTRO.git"
+        title: "JurisAI",
+        description: "I and my friends Nirvik and Rakshith teamed up and made a chatbot that answers questions regarding cyber laws.",
+        tech: ["React", "CSS3", "MongoDB"],
+        image: "/imgs/JurisAI.png",
+        link: "https://jurisai-ochre.vercel.app/",
+        github: "https://github.com/tanushbhootra576/JurisAI.git"
     },
     {
         title: "TIC-TAC-TOE",
