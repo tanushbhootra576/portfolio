@@ -37,7 +37,7 @@ const projects = [
         description: "A real-time weather app with OpenWeatherMap API, plus food & music recommendations.",
         tech: ["React", "CSS3", "Node.js", "API"],
         image: "/imgs/WeatherApp.png",
-        link: "https://sky-scanr.vercel.app/",
+        link: "https://skyscaner.vercel.app/",
         github: "https://github.com/tanushbhootra576/SKY-SCANr.git"
     },
     {
