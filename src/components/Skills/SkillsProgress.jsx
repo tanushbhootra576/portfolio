@@ -21,18 +21,17 @@ const skillsData = [
     {
         category: "Backend Development",
         skills: [
-            { name: "Node.js", percent: 60, icon: "🟩" },
-            { name: "Express.js", percent: 65, icon: "🚂" },
-            { name: "MongoDB", percent: 35, icon: "🍃" },
-
+            { name: "Node.js", percent: 30, icon: "🟩" },
+            { name: "Express.js", percent: 49, icon: "🚂" },
+         
         ]
     },
     {
         category: "Programming & Problem Solving",
         skills: [
-            { name: "Python", percent: 82, icon: "🐍" },
-            { name: "C", percent: 78, icon: "🔵" },
-            { name: "C++", percent: 70, icon: "💻" },
+            { name: "Python", percent: 52, icon: "🐍" },
+            { name: "C", percent: 58, icon: "🔵" },
+            { name: "C++", percent: 60, icon: "💻" },
             { name: "DSA", percent: 10, icon: "🗂️" }
         ]
     },
@@ -41,7 +40,7 @@ const skillsData = [
         skills: [
             { name: "Git & GitHub", percent: 65, icon: "🔗" },
             { name: "Vercel", percent: 68, icon: "⚙️" },
-            { name: "Netlify", percent: 50, icon: "🚀" },
+          
             { name: "Render", percent: 60, icon: "📎" }
         ]
     },
@@ -58,7 +57,7 @@ const skillsData = [
         skills: [
             { name: "VS Code", percent: 90, icon: "🧑‍💻" },
             { name: "Canva", percent: 78, icon: "📋" },
-            { name: "Figma", percent: 60, icon: "🎨" },
+          
         ]
     },
     {
@@ -161,3 +160,4 @@ const SkillsProgress = () => {
 };
 
 export default SkillsProgress;
+
