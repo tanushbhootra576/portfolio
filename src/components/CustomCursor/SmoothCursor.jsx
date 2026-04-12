@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion as Motion, useSpring } from "framer-motion";
 
 // const DefaultCursorSVG = () => {
@@ -65,17 +65,15 @@ import { motion as Motion, useSpring } from "framer-motion";
 //   );
 // };
 
-
-
-const DefaultCursorSVG = () => {
+const DefaultCursorSVG = ({ size = 50, scale = 0.5 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={50}
-      height={54}
+      width={size}
+      height={Math.round(size * 1.08)}
       viewBox="0 0 50 54"
       fill="none"
-      style={{ scale: 0.5 }}
+      style={{ scale }}
     >
       <g filter="url(#filter0_d_91_7928)">
         <path
@@ -94,7 +92,7 @@ const DefaultCursorSVG = () => {
 };
 
 export function SmoothCursor({
-  cursor = <DefaultCursorSVG />,
+  cursor,
   springConfig = {
     damping: 45,
     stiffness: 400,
@@ -102,12 +100,13 @@ export function SmoothCursor({
     restDelta: 0.001,
   },
 }) {
+  const [canUseCustomCursor, setCanUseCustomCursor] = useState(false);
+  const [isSmallViewport, setIsSmallViewport] = useState(false);
   const lastMousePos = useRef({ x: 0, y: 0 });
   const velocity = useRef({ x: 0, y: 0 });
   const lastUpdateTime = useRef(Date.now());
   const previousAngle = useRef(0);
   const accumulatedRotation = useRef(0);
-  const isTouchDevice = useRef(false);
 
   const cursorX = useSpring(0, springConfig);
   const cursorY = useSpring(0, springConfig);
@@ -123,18 +122,35 @@ export function SmoothCursor({
   });
 
   useEffect(() => {
-    // Detect touch device — hide cursor entirely
-    const hasTouch =
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0 ||
-      window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+    const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const updateCursorCapability = () => setCanUseCustomCursor(mediaQuery.matches);
 
-    isTouchDevice.current = hasTouch;
+    updateCursorCapability();
+    mediaQuery.addEventListener("change", updateCursorCapability);
 
-    if (hasTouch) {
+    return () => {
+      mediaQuery.removeEventListener("change", updateCursorCapability);
+    };
+  }, []);
+
+  useEffect(() => {
+    const viewportQuery = window.matchMedia("(max-width: 768px)");
+    const updateViewportSize = () => setIsSmallViewport(viewportQuery.matches);
+
+    updateViewportSize();
+    viewportQuery.addEventListener("change", updateViewportSize);
+
+    return () => {
+      viewportQuery.removeEventListener("change", updateViewportSize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!canUseCustomCursor) {
       document.body.style.cursor = "auto";
       return; // no listeners on touch devices
     }
+
     const updateVelocity = (currentPos) => {
       const currentTime = Date.now();
       const deltaTime = currentTime - lastUpdateTime.current;
@@ -202,10 +218,13 @@ export function SmoothCursor({
       document.body.style.cursor = "auto";
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [cursorX, cursorY, rotation, scale]);
+  }, [canUseCustomCursor, cursorX, cursorY, rotation, scale]);
 
-  // Don't render cursor element on touch devices
-  if (isTouchDevice.current) return null;
+  if (!canUseCustomCursor) return null;
+
+  const cursorNode =
+    cursor ??
+    <DefaultCursorSVG size={isSmallViewport ? 34 : 50} scale={isSmallViewport ? 0.42 : 0.5} />;
 
   return (
     <Motion.div
@@ -229,7 +248,7 @@ export function SmoothCursor({
         damping: 30,
       }}
     >
-      {cursor}
+      {cursorNode}
     </Motion.div>
   );
 }

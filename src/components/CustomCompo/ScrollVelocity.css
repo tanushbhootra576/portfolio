@@ -1,18 +1,32 @@
 .scroll-velocity-root {
-    width: 100%;
+    position: relative;
+    width: min(100%, 100vw);
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     padding-inline: clamp(0.75rem, 2.2vw, 1.5rem);
     box-sizing: border-box;
 }
 
+@supports not (overflow: clip) {
+    .scroll-velocity-root {
+        overflow-x: hidden;
+    }
+}
+
 .parallax {
     position: relative;
-    overflow: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
     width: 100%;
     max-width: 100%;
     margin-inline: auto;
     padding-block: clamp(0.2rem, 1vw, 0.5rem);
+}
+
+@supports not (overflow: clip) {
+    .parallax {
+        overflow-x: hidden;
+    }
 }
 
 .scroller {

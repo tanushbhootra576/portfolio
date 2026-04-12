@@ -217,8 +217,16 @@ export default function TheNewSkill() {
                     >
                         <h2 style={getHeadingStyle(activeSkillIndex === 2)}>Open Source</h2>
                         <p style={getTextStyle(activeSkillIndex === 2)}>
-                            Active contributor to the developer community. I build tools and libraries that help other developers ship faster, with a focus on <strong>Developer Experience (DX)</strong>.
+                            Active contributor to the developer community. I build practical tools and reusable components with a focus on <strong>Developer Experience (DX)</strong>, performance, and maintainable code.
                         </p>
+                        <p style={{ ...getTextStyle(activeSkillIndex === 2), marginTop: "0.65rem" }}>
+                            I regularly contribute through issue triage, bug fixes, refactors, and documentation updates that make projects easier to adopt and maintain for teams at different skill levels.
+                        </p>
+                        <ul style={{ ...getTextStyle(activeSkillIndex === 2), marginTop: "0.7rem", paddingLeft: "1.2rem", lineHeight: 1.6 }}>
+                            <li>Improve performance and accessibility in real-world UI components.</li>
+                            <li>Ship reusable patterns that reduce implementation time for common features.</li>
+                            <li>Write clear PR notes so maintainers can review and merge faster.</li>
+                        </ul>
                     </div>
 
                     {/* 4. KEY PROJECTS (Updated with your Real Projects) */}

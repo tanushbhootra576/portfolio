@@ -265,13 +265,17 @@ const MagicBento = () => {
                                 <span className="pill">Next.js</span>
                                 <span className="pill">TypeScript</span>
                                 <span className="pill">Tailwind</span>
+                                <span className="pill">Vite</span>
+                                <span className="pill">Framer Motion</span>
                             </div>
                         </div>
                         <div className="skill-group">
                             <span className="skill-title">BACKEND & SYSTEMS</span>
                             <div className="pills-row">
                                 <span className="pill">Node.js</span>
+                                <span className="pill">Express</span>
                                 <span className="pill">PostgreSQL</span>
+                                <span className="pill">MongoDB</span>
                                 <span className="pill">Rust</span>
                                 <span className="pill">Docker</span>
                             </div>
@@ -282,7 +286,33 @@ const MagicBento = () => {
                                 <span className="pill">GSAP</span>
                                 <span className="pill">Three.js</span>
                                 <span className="pill">Framer</span>
+                                <span className="pill">R3F</span>
+                                <span className="pill">WebGL</span>
                             </div>
+                        </div>
+                        <div className="skill-group">
+                            <span className="skill-title">TOOLING</span>
+                            <div className="pills-row">
+                                <span className="pill">GitHub</span>
+                                <span className="pill">Postman</span>
+                                <span className="pill">Vercel</span>
+                                <span className="pill">CI/CD</span>
+                            </div>
+                        </div>
+                        <div className="arsenal-note-block">
+                            <span className="skill-title">SIGNATURE STRENGTHS</span>
+                            <div className="arsenal-note-row">
+                                <span className="arsenal-note-pill">Performance-first UI</span>
+                                <span className="arsenal-note-pill">Animation systems thinking</span>
+                                <span className="arsenal-note-pill">API clarity & DX</span>
+                                <span className="arsenal-note-pill">Rapid prototyping to production</span>
+                            </div>
+                        </div>
+                        <div className="arsenal-build-mode">
+                            <span className="skill-title">CURRENT BUILD MODE</span>
+                            <p>
+                                Building immersive web interfaces that balance <strong>motion</strong>, <strong>maintainability</strong>, and <strong>Lighthouse performance</strong>.
+                            </p>
                         </div>
                     </div>
                 </BentoCard>
