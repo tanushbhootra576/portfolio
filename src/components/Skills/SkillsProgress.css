@@ -1,0 +1,429 @@
+/* Skills Section Container */
+.skills-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    overflow: hidden;
+    padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 3vw, 2rem);
+}
+
+/* Background Elements */
+.skills-bg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px; */
+    z-index: 0;
+    pointer-events: none;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+/* Header */
+.skills-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    z-index: 10;
+    position: relative;
+}
+
+.skills-title {
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    font-weight: 900;
+    color: var(--text-primary);
+    margin: 0 auto;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    text-align: center;
+}
+
+.skills-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Dome Container */
+.dome-container {
+    width: 100%;
+    height: 70vh;
+    max-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.skills-description-text {
+    width: 100%;
+    max-width: 980px;
+    text-align: left;
+    margin-top: 2.5rem;
+    text-align: center;
+    /* align-self: flex-start; */
+    z-index: 10;
+}
+
+/* Scroll-pinned word reveal */
+.skills-wordScroll {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 980px;
+    margin: 0 auto 2.5rem auto;
+    --skillsWordProgress: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 2.5rem 0.5rem 2.5rem 0.5rem;
+}
+
+.skills-wordScrollSticky {
+    position: relative;
+    width: 100%;
+}
+
+/* Frameless variant (no big card / no frame) */
+.skills-wordScroll--frameless {
+    min-height: 100vh;
+}
+
+.skills-wordScroll--frameless .skills-wordScrollSticky {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.75rem;
+}
+
+.skills-wordScroll--frameless .skills-wordScrollCard {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    overflow: visible;
+}
+
+.skills-wordScroll--frameless .skills-wordScrollCard::before {
+    display: none;
+}
+
+.skills-wordScroll--frameless .skills-wordCloud {
+    height: min(78vh, 760px);
+    background: none;
+    border: none;
+    overflow: visible;
+}
+
+.skills-wordScroll--frameless .skills-wordCloudPulse {
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle, rgba(var(--accent-primary-rgb), 0.10), transparent 68%);
+    filter: blur(1px);
+}
+
+.skills-wordScrollCard {
+    position: relative;
+    border-radius: 22px;
+    padding: clamp(1.1rem, 1.1rem + 1vw, 1.7rem);
+    background:
+        radial-gradient(1200px 600px at 50% 0%, rgba(var(--accent-primary-rgb), 0.10), transparent 60%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.16);
+    box-shadow:
+        0 30px 80px -40px rgba(0, 0, 0, 0.85),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.skills-wordScrollCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.10;
+    mask-image: radial-gradient(circle at 50% 30%, black 35%, transparent 70%);
+    pointer-events: none;
+}
+
+.skills-wordScrollTop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.skills-wordScrollHint {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.skills-wordScrollProgress {
+    width: min(240px, 42vw);
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.16);
+    overflow: hidden;
+}
+
+.skills-wordScrollProgressBar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(var(--accent-primary-rgb), 0.30), rgba(var(--accent-primary-rgb), 0.95));
+    box-shadow: 0 0 22px rgba(var(--accent-primary-rgb), 0.25);
+    transform: scaleX(var(--skillsWordProgress));
+    transform-origin: 0 50%;
+}
+
+.skills-wordCloud {
+    position: relative;
+    min-height: 180px;
+    max-height: 48vh;
+    border-radius: 18px;
+    background:
+        radial-gradient(800px 420px at 50% 50%, rgba(var(--accent-primary-rgb), 0.10), transparent 65%),
+        radial-gradient(600px 300px at 70% 20%, rgba(var(--accent-primary-rgb), 0.08), transparent 70%);
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.12);
+    overflow-y: auto;
+    overflow-x: hidden;
+    isolation: isolate;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    gap: 0.8rem 0.9rem;
+    padding: clamp(1rem, 2vw, 2rem);
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    z-index: 2;
+}
+
+.skills-wordCloudWordWrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    word-break: break-word;
+}
+
+.skills-wordCloudWord {
+    position: relative;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.16);
+    box-shadow:
+        0 14px 30px -18px rgba(0, 0, 0, 0.9),
+        0 0 26px rgba(var(--accent-primary-rgb), 0.12);
+    text-shadow: 0 0 16px rgba(var(--accent-primary-rgb), 0.18);
+    white-space: pre-line;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+    --glow: 0;
+    box-shadow:
+        0 14px 30px -18px rgba(0, 0, 0, 0.9),
+        0 0 calc(28px * var(--glow)) rgba(var(--accent-primary-rgb), 0.35);
+}
+
+.skills-wordCloudWord--md {
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
+    font-weight: 700;
+}
+
+.skills-wordCloudWord--lg {
+    font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.7rem);
+    font-weight: 800;
+    background: rgba(var(--accent-primary-rgb), 0.14);
+}
+
+.skills-wordCloudWord--xl {
+    font-size: clamp(1.55rem, 1.15rem + 1.5vw, 2.1rem);
+    font-weight: 900;
+    background: rgba(var(--accent-primary-rgb), 0.22);
+    border-color: rgba(var(--accent-primary-rgb), 0.28);
+}
+
+.skills-wordCloudCenter {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.skills-wordCloudPulse {
+    width: 220px;
+    height: 220px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(var(--accent-primary-rgb), 0.16), transparent 65%);
+    filter: blur(2px);
+    opacity: 0.35;
+    animation: skillsWordCloudPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes skillsWordCloudPulse {
+    0% {
+        opacity: 0.25;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 0.25;
+        transform: scale(1);
+    }
+}
+
+.skills-wordScrollBottom {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.skills-wordScrollTag {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* SplitType/GSAP reveal helpers */
+.skills-split-animate .line {
+    display: block;
+    overflow: hidden;
+}
+
+.skills-split-animate .line>* {
+    display: inline-block;
+    will-change: transform;
+}
+
+.skills-description-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .skills-wordScroll {
+        padding: 1.5rem 0.2rem 1.5rem 0.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skills-wordCloud {
+        min-height: 120px;
+        max-height: 32vh;
+        gap: 0.4rem 0.7rem;
+        padding: 0.7rem 0.2rem;
+    }
+
+    .skills-wordCloudWord {
+        font-size: 0.95rem;
+    }
+
+    .skills-wordCloudWord--lg {
+        font-size: 1.1rem;
+    }
+
+    .skills-wordCloudWord--xl {
+        font-size: 1.25rem;
+    }
+
+    .skills-wordCloudPulse {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-wordScroll {
+        padding: 0.7rem 0.05rem 0.7rem 0.05rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .skills-wordCloud {
+        min-height: 80px;
+        max-height: 22vh;
+        gap: 0.15rem 0.2rem;
+        padding: 0.2rem 0.1rem;
+    }
+
+    .skills-wordCloudWord {
+        font-size: 0.85rem;
+    }
+
+    .skills-wordCloudWord--lg {
+        font-size: 1rem;
+    }
+
+    .skills-wordCloudWord--xl {
+        font-size: 1.15rem;
+    }
+
+    .skills-wordCloudPulse {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        padding: 2rem 0.75rem;
+    }
+
+    .skills-header {
+        margin-bottom: 2rem;
+    }
+
+    .dome-container {
+        height: 50vh;
+    }
+
+    .skills-wordScrollTop {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}

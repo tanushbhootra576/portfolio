@@ -1,0 +1,106 @@
+/* Mobile-first hero layout */
+
+.landing-cmp1 {
+    width: 100%;
+    min-height: 70vh;
+    padding: 6rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.landing-title {
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    line-height: 1.05;
+    word-wrap: break-word;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.landing-subtitle {
+    font-size: clamp(1rem, 3.2vw, 1.6rem);
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.landing-marquee {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.75rem;
+    transform-origin: center;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, var(--accent-secondary) 0%, var(--accent-primary) 55%, var(--accent-secondary) 100%);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(var(--accent-primary-rgb), 0.28);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+a.contact-button {
+    text-decoration: none;
+}
+
+.contact-button a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-button:hover {
+    background: linear-gradient(45deg, #2563eb 0%, #0891b2 55%, #2563eb 100%);
+    box-shadow: 0 4px 16px rgba(var(--accent-primary-rgb), 0.45);
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+    .landing-cmp1 {
+        padding-top: 7rem;
+    }
+}
+
+/* Small laptop */
+@media (min-width: 769px) {
+    .landing-cmp1 {
+        min-height: 80vh;
+        padding-top: 8rem;
+        padding-bottom: 6rem;
+    }
+
+    .landing-title {
+        font-size: clamp(3.5rem, 6vw, 5.5rem);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .landing-cmp1 {
+        min-height: 90vh;
+    }
+
+    .landing-title {
+        font-size: clamp(4rem, 5vw, 6rem);
+    }
+}
+
+/* Large screens */
+@media (min-width: 1441px) {
+    .landing-cmp1 {
+        padding-top: 10rem;
+    }
+}

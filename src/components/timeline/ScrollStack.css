@@ -1,0 +1,65 @@
+:root {
+    --bg-dark: #050507;
+    --glass-bg: rgba(20, 20, 25, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+.scroll-stack-scroller {
+    position: relative;
+    width: 100%;
+    contain: layout paint;
+}
+
+.scroll-stack-card {
+    position: sticky;
+    top: var(--stack-top, 15%);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-radius: clamp(16px, 3vw, 30px);
+    padding: 2px;
+    /* Space for animated border */
+    margin-bottom: clamp(30px, 5vw, 60px);
+    transition: box-shadow 0.3s ease;
+    transform-origin: top center;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+    overflow: visible;
+}
+
+/* Aurora Glow Background */
+.scroll-stack-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: clamp(16px, 3vw, 30px);
+    background: radial-gradient(800px circle at 50% 0%,
+            color-mix(in srgb, var(--accent) 15%, transparent),
+            transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Animated Border Gradient */
+.scroll-stack-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: clamp(16px, 3vw, 30px);
+    padding: 1px;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0.0) 40%,
+            color-mix(in srgb, var(--accent) 60%, transparent) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+}
+
+.scroll-stack-card:hover {
+    box-shadow: 0 20px 80px -10px color-mix(in srgb, var(--accent) 25%, transparent);
+}

@@ -1,0 +1,22 @@
+.chat-compo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    width: clamp(90px, 12vw, 150px);
+    height: clamp(57px, 7.6vw, 95px);
+}
+
+/* Hide on very small screens to save space */
+@media (max-width: 480px) {
+    .chat-compo-container {
+        width: 70px;
+        height: 45px;
+        bottom: 2%;
+        right: 1%;
+    }
+}

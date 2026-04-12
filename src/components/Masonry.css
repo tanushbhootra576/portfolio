@@ -1,0 +1,111 @@
+.list {
+    position: relative;
+    width: 100%;
+    min-height: clamp(300px, 50vw, 600px);
+    height: auto;
+    display: block;
+    /* Let the container expand to fit all items */
+    padding-bottom: 48px;
+}
+
+.item-wrapper {
+    position: absolute;
+    will-change: transform, width, height, opacity;
+    padding: 6px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.item-wrapper>.item-img {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 10px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* ---- Horizontal Scroll Gallery (compact screens) ---- */
+.hgal-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 2.2vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.hgal-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.hgal-track {
+    display: flex;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    padding: 0 clamp(0.75rem, 3vw, 1.5rem);
+    width: max-content;
+    align-items: center;
+}
+
+.hgal-card {
+    flex: 0 0 auto;
+    width: clamp(200px, 55vw, 280px);
+    height: clamp(260px, 70vw, 360px);
+    border-radius: clamp(12px, 2vw, 16px);
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: center;
+    box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.hgal-card:active {
+    transform: scale(0.97);
+}
+
+@media (hover: hover) {
+    .hgal-card:hover {
+        transform: scale(1.03);
+    }
+}
+
+.hgal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Smaller cards on very small phones */
+@media (max-width: 400px) {
+    .hgal-card {
+        width: 180px;
+        height: 240px;
+    }
+}
+
+/* Landscape phones */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hgal-card {
+        width: 200px;
+        height: 180px;
+    }
+
+    .hgal-wrapper {
+        padding: 0.5rem 0;
+    }
+}

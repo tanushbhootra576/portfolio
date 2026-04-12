@@ -1,0 +1,29 @@
+.scrambled-text-demo {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: var(--text-2xl);
+}
+
+/* Full-bleed marquee text rows */
+.custom-scroll-text,
+.tutorial-011-text {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    padding-inline: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+@media (min-width: 769px) {
+
+    .custom-scroll-text,
+    .tutorial-011-text {
+        font-size: clamp(2rem, 4vw, 4.5rem);
+    }
+}

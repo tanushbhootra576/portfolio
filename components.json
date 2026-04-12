@@ -1,0 +1,8 @@
+{
+  "components": [],
+  "metadata": {
+    "createdBy": "automation",
+    "createdAt": "2025-11-07T00:00:00.000Z",
+    "note": "Minimal components file created so a components generator can proceed. If you plan to use shadcn/ui, install Tailwind CSS and add a tsconfig path alias for @ to src/ (see README or generator output)."
+  }
+}
