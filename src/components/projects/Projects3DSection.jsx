@@ -12,53 +12,62 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
-        title: "Portfolio Website",
-        description: "A personal portfolio built with React.js featuring animated transitions, responsive design, a dynamic skills section and more.",
-        tech: ["React", "CSS3", "Framer Motion", "GSAP"],
-        image: "/imgs/portfolio.webp",
-        link: "",
-        github: "https://github.com/tanushbhootra576/portfolio"
+        title: "Epistemic Protocol",
+        description: "A decentralized code provenance protocol leveraging Zero-Knowledge cryptography and biometric authentication to verify secure developer identity and commit integrity under strict execution environments.",
+        tech: ["TypeScript", "Rust", "Python", "Docker", "ZK-Snarks"],
+         image: "/imgs/WeatherApp.webp", // Consider renaming this asset to match the project name
+        link: "https://epistemic-lac.vercel.app/",
+        github: "" 
     },
+ 
     {
-        title: "LenScape",
-        description: "A portfolio for landscape through my mobile lens ;).",
-        tech: ["HTML5", "CSS3", "JavaScript", "Framer Motion", "GSAP"],
-        image: "/imgs/LenScape.webp",
-        link: "https://lenscape-i692.onrender.com/",
-        github: "https://github.com/tanushbhootra576/lenscape.git"
+        title: "use-web-kit",
+        description: "A high-performance, zero-dependency utility toolkit for React 19 engineered to prevent browser memory leaks, optimize complex DOM node lifecycles, and handle asynchronous background processes using dedicated worker pooling.",
+        tech: ["TypeScript", "React 19", "Performance Engineering", "Web Workers"],
+        image: "/imgs/use-web-kit.webp",
+        link: "https://use-web-kit.vercel.app/",
+        github: "https://github.com/tanushbhootra576/use-web-kit"
     },
     {
         title: "CampusConnect",
-        description: "A social media platform for college students to connect, share, and collaborate on campus events and activities.",
-        tech: ["NEXT JS", "TypeScript", "CSS3", "MongoDB"],
+        description: "A secure, comprehensive academic management platform and social hub designed for student collaboration, featuring automated web-scraping utilities for instant portal syncing and an integrated distributed file drive.",
+        tech: ["Next.js", "TypeScript", "MongoDB", "Puppeteer", "TailwindCSS"],
         image: "/imgs/CampusConnect.webp",
         link: "https://studentverse-amber.vercel.app/",
         github: "https://github.com/tanushbhootra576/camp.git"
     },
     {
-        title: "JurisAI",
-        description: "I and my friends Nirvik and Rakshith teamed up and made a chatbot that answers questions regarding cyber laws.",
-        tech: ["React", "CSS3", "MongoDB"],
-        image: "/imgs/JurisAI.webp",
-        link: "https://jurisai-ochre.vercel.app/",
-        github: "https://github.com/tanushbhootra576/JurisAI.git"
-    },
-    {
         title: "GridSaga",
-        description: "A captivating grid-based puzzle game with procedural level generation and strategic gameplay.",
-        tech: ["Next.js", "TypeScript", "Three.js", "CSS3"],
+        description: "A 3D logic puzzle game combining core mechanics of 2048 with spatial Rubik's Cube rotations, featuring modular state management and procedural level generation.",
+        tech: ["Next.js", "TypeScript", "Three.js", "React Three Fiber", "TailwindCSS"],
         image: "/imgs/GridSaga.webp",
         link: "https://grid-saga.vercel.app/",
         github: "https://github.com/tanushbhootra576/GridSaga.git"
     },
     {
-        title: "SKY-SCANr",
-        description: "A real-time weather app with OpenWeatherMap API, plus food & music recommendations.",
-        tech: ["React", "CSS3", "Node.js", "API"],
-        image: "/imgs/WeatherApp.webp",
-        link: "https://skyscaner.vercel.app/",
-        github: "https://github.com/tanushbhootra576/SKY-SCANr.git"
-    }
+        title: "JurisAI",
+        description: "An AI-powered legal assistant chat platform engineered to parsing text data structures and deliver accurate, contextual citations regarding cyber laws and regulatory frameworks.",
+        tech: ["React", "Node.js", "MongoDB", "LLM Integration", "TailwindCSS"],
+        image: "/imgs/JurisAI.webp",
+        link: "https://jurisai-ochre.vercel.app/",
+        github: "https://github.com/tanushbhootra576/JurisAI.git"
+    },
+      {
+        title: "GitPreview",
+        description: "A developer utility designed to streamline code reviews and asset tracking by generating instant, live browser previews of repository visual changes and deployment states directly from Git workflows.",
+        tech: ["TypeScript", "JavaScript", "HTML5", "CSS3", "Git API"],
+        image: "/imgs/gitpreview.webp",
+        link: "https://gitview-seven.vercel.app/",
+        github: "https://github.com/tanushbhootra576/GitPreview"
+    },
+    // {
+    //     title: "LenScape",
+    //     description: "A visually driven photography portfolio featuring premium, high-fidelity glassmorphic user interfaces and optimized asset layouts backed by modern fluid animation orchestration.",
+    //     tech: ["React", "Framer Motion", "GSAP", "TailwindCSS"],
+    //     image: "/imgs/LenScape.webp",
+    //     link: "https://lenscape-i692.onrender.com/",
+    //     github: "https://github.com/tanushbhootra576/lenscape.git"
+    // }
 ];
 
 const ProjectCard = ({ project, index, isDesktop }) => {

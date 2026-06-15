@@ -210,7 +210,7 @@ const MagicBento = () => {
                             <h4 className="academic-title">B.Tech CSE</h4>
                             <h4 className="academic-title">AI - Robotics</h4>
                             <p className="academic-meta">VIT Chennai &bull; 2024-2028</p>
-                            <span className="academic-badge academic-badge-accent">CGPA: 8.42</span>
+                            <span className="academic-badge academic-badge-accent">CGPA: 8.66</span>
                             <p className="academic-desc">
                                 Building a strong base in computer science while focusing on intelligent systems,
                                 robotics, and practical product development.
@@ -259,7 +259,7 @@ const MagicBento = () => {
                     <span className="card-label">TECH ARSENAL</span>
                     <div className="skills-grid">
                         <div className="skill-group">
-                            <span className="skill-title">CORE</span>
+                            <span className="skill-title">FRONTEND</span>
                             <div className="pills-row">
                                 <span className="pill">React</span>
                                 <span className="pill">Next.js</span>
@@ -270,7 +270,7 @@ const MagicBento = () => {
                             </div>
                         </div>
                         <div className="skill-group">
-                            <span className="skill-title">BACKEND & SYSTEMS</span>
+                            <span className="skill-title">FULLSTACK & SYSTEMS</span>
                             <div className="pills-row">
                                 <span className="pill">Node.js</span>
                                 <span className="pill">Express</span>
@@ -281,7 +281,7 @@ const MagicBento = () => {
                             </div>
                         </div>
                         <div className="skill-group">
-                            <span className="skill-title">CREATIVE</span>
+                            <span className="skill-title">CREATIVE FRONTEND</span>
                             <div className="pills-row">
                                 <span className="pill">GSAP</span>
                                 <span className="pill">Three.js</span>

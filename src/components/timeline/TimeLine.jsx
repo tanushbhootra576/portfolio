@@ -104,9 +104,9 @@ const Timeline = () => {
             </div>
 
             <div className="experience-container">
-                <ScrollStack stackPosition="15%">
+                <ScrollStack>
                     {experiences.map((exp, i) => (
-                        <ScrollStackItem key={i}>
+                        <ScrollStackItem key={i} index={i}>
                             <div className="card-inner" style={{ '--accent': exp.color }}>
                                 <div className="card-content-grid">
 

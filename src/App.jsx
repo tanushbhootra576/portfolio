@@ -14,7 +14,7 @@ const Footer = lazy(() => import('./components/Footer/Footer'));
 const WorldMapGrid = lazy(() => import('./components/WorldMapGrid'));
 const Aurora = lazy(() => import('./components/Footer/Aurora'));
 const Projects3DSection = lazy(() => import('./components/projects/Projects3DSection'));
-const ScrollVelocity = lazy(() => import('./components/CustomCompo/ScrollVelocity'));
+const ScrollRevealText = lazy(() => import('./components/CustomCompo/ScrollRevealText'));
 const MasonryOptimized = lazy(() => import('./components/MasonryOptimized'));
 const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
 const Timeline = lazy(() => import('./components/timeline/TimeLine'));
@@ -130,9 +130,7 @@ const App = () => {
             <Compo />
           </Suspense>
         ) : null}
-        {/* <Spacer size={48} /> */}
         <LandingCmp1 />
-        {/* <Spacer size={48} /> */}
 
 
         <DeferredMasonry items={masonryItems} />
@@ -153,7 +151,6 @@ const App = () => {
         <LazySection minHeight={420}>
           <Certification />
         </LazySection>
-        {/* <Spacer size={48} /> */}
 
         <section id="projects">
           <LazySection minHeight={520}>
@@ -168,10 +165,8 @@ const App = () => {
         </section>
         <Spacer size={48} />
         <LazySection minHeight={120}>
-          <ScrollVelocity
-            texts={["Engineer by Degree, Developer by Passion |", "From Code to Creation |", "Turning ideas into code |", "Building the future |", "Innovating through code |"]}
-            velocity={150}
-          // className="custom-scroll-text"
+          <ScrollRevealText
+            text="Engineer by Degree, Developer by Passion. Turning raw ideas into scalable code and building the future through relentless innovation."
           />
         </LazySection>
 

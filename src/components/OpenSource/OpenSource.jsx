@@ -54,30 +54,7 @@ useAdaptivePolling(fetchMetrics, {
   />
 </MotionProvider>`,
     },
-    {
-        name: "OpenMS-website",
-        label: "open-source contribution",
-        description:
-            "Contributed UI/UX improvements to the OpenMS website by redesigning the mobile footer layout into a responsive multi-column grid. The update improved scanability, touch accessibility, and reduced excessive vertical scrolling on smaller screens.",
-        tech: ["React", "CSS Grid", "Responsive UI/UX", "Open Source"],
-        version: "PR #255",
-        downloads: "Issue #254 closed",
-        license: "MIT",
-        github: "https://github.com/OpenMS/OpenMS-website/pull/255",
-        primaryLabel: "Pull Request",
-
-        secondaryLabel: "Issue",
-        demo: "https://github.com/OpenMS/OpenMS-website",
-        demoLabel: "Repository",
-        status: "Merged contribution",
-        snippet: `/* Mobile footer redesign */
-.footer-links-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem 1rem;
-    text-align: left;
-}`,
-    },
+  
 ];
 
 const AnimatedHeading = () => {

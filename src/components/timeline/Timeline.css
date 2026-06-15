@@ -2,7 +2,8 @@
     background: var(--bg-dark);
     padding: var(--space-2xl) 0;
     position: relative;
-    overflow: visible;
+    overflow: visible; 
+    clip-path: inset(0); /* CRITICAL: Clips the bg-text blowout horizontally WITHOUT breaking position: sticky! */
     color: #e2e8f0;
     font-family: var(--font-sans);
 }

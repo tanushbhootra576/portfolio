@@ -15,19 +15,29 @@
 }
 
 .bento-grid {
-    container-type: inline-size;
     display: grid;
-    gap: clamp(0.6rem, 1.5vw, 1rem);
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
     width: 100%;
     max-width: min(100%, 110rem);
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(clamp(11rem, 34vw, 16rem), auto);
+    grid-template-areas:
+        "name"
+        "profile"
+        "status"
+        "expertise"
+        "academic"
+        "coding"
+        "photo";
 }
 
-.card-profile {
-    aspect-ratio: 4 / 5;
-    min-height: clamp(18rem, 72vw, 28rem);
-}
+/* Assign Grid Areas */
+.card-profile { grid-area: profile; min-height: clamp(16rem, 50vw, 24rem); }
+.card-photo { grid-area: photo; min-height: 8rem; }
+.card-name { grid-area: name; }
+.card-status-resume { grid-area: status; }
+.card-academic { grid-area: academic; }
+.card-expertise { grid-area: expertise; }
+.card-coding { grid-area: coding; min-height: 12rem; }
 
 .card-profile .card-content {
     padding: 0;
@@ -37,114 +47,42 @@
         linear-gradient(180deg, #050505 0%, #000 100%);
 }
 
-.card-photo,
-.card-status-resume,
-.card-academic,
-.card-expertise,
-.card-coding {
-    min-height: clamp(13rem, 48vw, 19rem);
-}
-
 /* Tablet: 2 Columns */
 @media (min-width: 36rem) {
     .bento-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .card-coding {
-        grid-column: 1 / -1;
-    }
-
-    .card-profile {
-        aspect-ratio: 3 / 4;
-        min-height: clamp(20rem, 44vw, 30rem);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "name name"
+            "profile profile"
+            "status photo"
+            "expertise expertise"
+            "academic academic"
+            "coding coding";
     }
 }
 
 /* Tablet landscape: 3 Columns */
 @media (min-width: 52rem) {
     .bento-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-auto-rows: minmax(clamp(12rem, 24vw, 17rem), auto);
-    }
-
-    .card-name {
-        grid-column: span 2;
-    }
-
-    .card-expertise {
-        grid-column: span 2;
-    }
-
-    .card-coding {
-        grid-column: span 2;
-    }
-
-    .card-photo,
-    .card-status-resume,
-    .card-academic,
-    .card-expertise,
-    .card-coding {
-        min-height: clamp(14rem, 26vw, 20rem);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "profile name name"
+            "profile status photo"
+            "expertise expertise expertise"
+            "academic academic academic"
+            "coding coding coding";
     }
 }
 
 /* Desktop: 4 Columns & Strategic Layout */
 @media (min-width: 68rem) {
     .bento-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-auto-rows: minmax(clamp(12rem, 17vw, 15rem), 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "profile name name status"
+            "profile academic expertise expertise"
+            "photo academic coding coding";
     }
-
-    /* Column 1 (Left) */
-    .card-profile {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
-        aspect-ratio: auto;
-        min-height: auto;
-    }
-
-    .card-photo {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-        min-height: auto;
-    }
-
-    /* Column 2, 3, 4 (Middle & Right) */
-    .card-name {
-        grid-column: 2 / 4;
-        grid-row: 1 / 2;
-    }
-
-    .card-status-resume {
-        grid-column: 4 / 5;
-        grid-row: 1 / 2;
-    }
-
-    /* Academic strip */
-    .card-academic {
-        grid-column: 2 / 3;
-        grid-row: 2 / 4;
-    }
-
-    /* Right Side Blocks */
-    .card-expertise {
-        grid-column: 3 / 5;
-        grid-row: 2 / 3;
-    }
-
-    .card-vision {
-        grid-column: 3 / 5;
-        grid-row: 3 / 4;
-    }
-
-    .card-status-resume,
-    .card-academic,
-    .card-expertise,
-    .card-coding {
-        min-height: auto;
-    }
-
 }
 
 /* --- Card Basics --- */
@@ -164,7 +102,7 @@
 }
 
 .card-content {
-    padding: clamp(1rem, 2.5vw, 1.5rem);
+    padding: clamp(0.7rem, 1.5vw, 1rem);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -188,7 +126,7 @@
 /* --- Name Card --- */
 .name-container {
     height: 100%;
-    min-height: clamp(10rem, 30vw, 15rem);
+    min-height: clamp(6rem, 18vw, 10rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,10 +217,10 @@
 }
 
 .resume-body p {
-    font-size: clamp(0.82rem, 0.74rem + 0.2vw, 0.92rem);
+    font-size: clamp(0.78rem, 0.74rem + 0.2vw, 0.88rem);
     color: #999;
-    margin: 0 0 15px 0;
-    line-height: 1.5;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
     max-width: 36ch;
 }
 
@@ -294,18 +232,18 @@
 }
 
 .bento-btn {
-    flex: 1 1 10rem;
+    flex: 1 1 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 0.75rem 0.9rem;
+    padding: 0.6rem 0.8rem;
     border-radius: 8px;
-    font-size: clamp(0.78rem, 0.72rem + 0.15vw, 0.84rem);
+    font-size: clamp(0.75rem, 0.7rem + 0.15vw, 0.8rem);
     font-weight: 600;
     text-decoration: none;
     transition: transform 0.2s, background 0.2s;
-    min-height: 44px;
+    min-height: 38px;
 }
 
 .bento-btn:hover {
@@ -398,9 +336,8 @@
 
 /* --- Tech Arsenal --- */
 .skills-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     height: auto;
     gap: clamp(0.65rem, 0.95vw, 0.9rem);
 }
@@ -438,6 +375,7 @@
 
 .arsenal-note-block,
 .arsenal-build-mode {
+    grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
@@ -587,12 +525,10 @@
 
 /* --- Images --- */
 .profile-img-full {
-    position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center bottom;
 }
 
 .full-bg-img {
@@ -616,13 +552,7 @@
     z-index: 2;
 }
 
-/* Add to MagicBento.css */
-@media (min-width: 68rem) {
-    .card-coding {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-}
+
 
 /* Tablet portrait tightening */
 @media (max-width: 52rem) {
@@ -665,8 +595,8 @@
     }
 
     .card-profile {
-        aspect-ratio: 4 / 5;
-        min-height: 16rem;
+        aspect-ratio: auto;
+        min-height: 12rem;
     }
 
     .card-photo,
@@ -674,7 +604,7 @@
     .card-academic,
     .card-expertise,
     .card-coding {
-        min-height: 12rem;
+        min-height: 7rem;
     }
 
     .hyper-text-title {
@@ -706,6 +636,7 @@
     }
 
     .skills-grid {
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 
@@ -739,6 +670,6 @@
 
 @media (min-width: 96rem) {
     .bento-grid {
-        grid-auto-rows: minmax(clamp(13rem, 15vw, 17rem), 1fr);
+        grid-auto-rows: min-content;
     }
 }

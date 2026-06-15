@@ -1,0 +1,44 @@
+.scroll-reveal-container {
+    width: 100%;
+    padding: 8rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.scroll-reveal-inner {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem 1rem;
+    font-family: var(--font-sans), "Inter", system-ui, -apple-system, sans-serif;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.reveal-word-wrapper {
+    overflow: hidden; /* Hides the vertical shift so it slides out from nowhere */
+    display: inline-flex;
+}
+
+.reveal-word {
+    display: inline-block;
+    will-change: opacity, transform;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .scroll-reveal-container {
+        padding: 6rem 5%;
+    }
+    .scroll-reveal-inner {
+        font-size: clamp(1.8rem, 7vw, 3rem);
+        gap: 0.8rem 0.6rem;
+    }
+}

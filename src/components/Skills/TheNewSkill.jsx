@@ -158,14 +158,14 @@ export default function TheNewSkill() {
                             between creative design and robust engineering.
                         </p>
                         <p style={{ ...styles.text, marginBottom: "0.5rem" }}>
-                            Currently, I'm focused on <strong>interactive 3D web experiences</strong> and scalable
+                            Currently, I'm focused on <strong>interactive web Designs</strong> and scalable
                             full-stack architectures. I love solving complex UI challenges using tools like
                             GSAP, Three.js, and TypeScript.
                         </p>
                         <ul style={{ margin: 0, paddingLeft: "1.25rem", opacity: 0.85, lineHeight: "1.6" }}>
                             <li>Building production-ready apps with <strong>Next.js & TypeScript</strong></li>
                             <li>Crafting immersive animations with <strong>GSAP & Framer Motion</strong></li>
-                            <li>PW Student Ambassador & Web Dev @ <strong>CodeChef VIT</strong></li>
+                            <li>PW Student Ambassador & Web Dev @ <strong>CodeChef VIT and Bionary Club</strong></li>
                         </ul>
                     </div>
 
@@ -188,26 +188,28 @@ export default function TheNewSkill() {
 
                     {/* 3. DETAILED SKILL SECTIONS (Scroll Triggers) */}
 
-                    <div
-                        className={`tns-service-item ${activeSkillIndex === 0 ? "is-active" : ""}`}
-                        data-skill-index="0"
-                        style={getServiceItemStyle(activeSkillIndex === 0)}
-                    >
-                        <h2 style={getHeadingStyle(activeSkillIndex === 0)}>Creative Frontend</h2>
-                        <p style={getTextStyle(activeSkillIndex === 0)}>
-                            I don't just build pages; I build experiences. Specializing in <strong>React, GSAP, and Three.js</strong> to create fluid, award-winning type interfaces (like this portfolio!).
-                        </p>
-                    </div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
+                        <div
+                            className={`tns-service-item ${activeSkillIndex === 0 ? "is-active" : ""}`}
+                            data-skill-index="0"
+                            style={getServiceItemStyle(activeSkillIndex === 0)}
+                        >
+                            <h2 style={getHeadingStyle(activeSkillIndex === 0)}>Creative Frontend</h2>
+                            <p style={getTextStyle(activeSkillIndex === 0)}>
+                                I don't just build pages; I build experiences. Specializing in <strong>React, GSAP, and Three.js</strong> to create fluid, award-winning type interfaces (like this portfolio!).
+                            </p>
+                        </div>
 
-                    <div
-                        className={`tns-service-item ${activeSkillIndex === 1 ? "is-active" : ""}`}
-                        data-skill-index="1"
-                        style={getServiceItemStyle(activeSkillIndex === 1)}
-                    >
-                        <h2 style={getHeadingStyle(activeSkillIndex === 1)}>Full Stack Systems</h2>
-                        <p style={getTextStyle(activeSkillIndex === 1)}>
-                            Leveraging <strong>Node.js, Express, and PostgreSQL</strong> to build scalable backend systems. I focus on clean API design, authentication, and database optimization.
-                        </p>
+                        <div
+                            className={`tns-service-item ${activeSkillIndex === 1 ? "is-active" : ""}`}
+                            data-skill-index="1"
+                            style={getServiceItemStyle(activeSkillIndex === 1)}
+                        >
+                            <h2 style={getHeadingStyle(activeSkillIndex === 1)}>Full Stack Systems</h2>
+                            <p style={getTextStyle(activeSkillIndex === 1)}>
+                                Leveraging <strong>Node.js, Express, and PostgreSQL</strong> to build scalable backend systems. I focus on clean API design, authentication, and database optimization and many more.
+                            </p>
+                        </div>
                     </div>
 
                     <div
@@ -236,36 +238,116 @@ export default function TheNewSkill() {
                         style={getServiceItemStyle(activeSkillIndex === 3)}
                     >
                         <h2 style={getHeadingStyle(activeSkillIndex === 3)}>Featured Work</h2>
-                        <div style={{ display: 'grid', gap: 'clamp(12px, 2vw, 20px)', marginTop: 'clamp(12px, 2vw, 20px)' }}>
+                    
 
-                            {/* Project 1: GridSaga */}
-                            <div style={{ background: 'rgba(255,255,255,0.05)', padding: 'clamp(12px, 2.5vw, 20px)', borderRadius: '12px' }}>
-                                <h4 style={{ margin: "0 0 5px 0", fontSize: "clamp(1rem, 2vw, 1.2rem)" }}>GridSaga</h4>
-                                <p style={{ fontSize: "clamp(0.8rem, 1.5vw, 0.9rem)", opacity: 0.7, marginBottom: "10px" }}>
-                                    A 3D logic puzzle game combining 2048 with a Rubik's Cube.
-                                </p>
-                                <div style={{ fontSize: "0.8rem", opacity: 0.5 }}>TypeScript • Three.js • React Three Fiber</div>
-                            </div>
+<div style={{ 
+    display: 'flex', 
+    flexWrap: 'wrap', 
+    gap: 'clamp(16px, 2.5vw, 24px)', 
+    marginTop: 'clamp(16px, 2.5vw, 24px)' 
+}}>
 
-                            {/* Project 2: CollegeConnect */}
-                            <div style={{ background: 'rgba(255,255,255,0.05)', padding: 'clamp(12px, 2.5vw, 20px)', borderRadius: '12px' }}>
-                                <h4 style={{ margin: "0 0 5px 0", fontSize: "clamp(1rem, 2vw, 1.2rem)" }}>CollegeConnect</h4>
-                                <p style={{ fontSize: "clamp(0.8rem, 1.5vw, 0.9rem)", opacity: 0.7, marginBottom: "10px" }}>
-                                    Comprehensive academic management platform with file drive and automated tools.
-                                </p>
-                                <div style={{ fontSize: "0.8rem", opacity: 0.5 }}>MERN Stack • Puppeteer • Material UI</div>
-                            </div>
+    {/* Project 1: VoxMotion */}
+    <div style={{ 
+        flex: '1 1 280px',
+        minWidth: 0,
+        background: 'rgba(255, 255, 255, 0.03)', 
+        border: '1px solid rgba(255, 255, 255, 0.08)',
+        padding: 'clamp(16px, 3vw, 24px)', 
+        borderRadius: '16px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    }}>
+        <div>
+            <h4 style={{ margin: "0 0 8px 0", fontSize: "clamp(1.1rem, 2vw, 1.3rem)", fontWeight: 600, letterSpacing: '-0.02em' }}>
+                VoxMotion
+            </h4>
+            <p style={{ fontSize: "clamp(0.85rem, 1.5vw, 0.95rem)", opacity: 0.8, lineHeight: '1.5', marginBottom: "16px" }}>
+                An autonomous rescue scout robot prototype featuring a triple-redundant control system with real-time tactical remote controls, voice commands, and automated mapping.
+            </p>
+        </div>
+        <div style={{ fontSize: "0.75rem", opacity: 0.5, fontFamily: 'monospace', letterSpacing: '0.05em' }}>
+            C++ • Robotics Engineering • Hardware Control
+        </div>
+    </div>
 
-                            {/* Project 3: Lenscape */}
-                            <div style={{ background: 'rgba(255,255,255,0.05)', padding: 'clamp(12px, 2.5vw, 20px)', borderRadius: '12px' }}>
-                                <h4 style={{ margin: "0 0 5px 0", fontSize: "clamp(1rem, 2vw, 1.2rem)" }}>Lenscape</h4>
-                                <p style={{ fontSize: "clamp(0.8rem, 1.5vw, 0.9rem)", opacity: 0.7, marginBottom: "10px" }}>
-                                    A visually driven social platform for photographers with glassmorphic UI.
-                                </p>
-                                <div style={{ fontSize: "0.8rem", opacity: 0.5 }}>React • Framer Motion • Tailwind</div>
-                            </div>
+    {/* Project 2: use-web-kit */}
+    <div style={{ 
+        flex: '1 1 280px',
+        minWidth: 0,
+        background: 'rgba(255, 255, 255, 0.03)', 
+        border: '1px solid rgba(255, 255, 255, 0.08)',
+        padding: 'clamp(16px, 3vw, 24px)', 
+        borderRadius: '16px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    }}>
+        <div>
+            <h4 style={{ margin: "0 0 8px 0", fontSize: "clamp(1.1rem, 2vw, 1.3rem)", fontWeight: 600, letterSpacing: '-0.02em' }}>
+                use-web-kit
+            </h4>
+            <p style={{ fontSize: "clamp(0.85rem, 1.5vw, 0.95rem)", opacity: 0.8, lineHeight: '1.5', marginBottom: "16px" }}>
+                A zero-dependency React 19 performance toolkit designed to optimize DOM node lifecycles, manage worker pools efficiently, and prevent browser memory leaks.
+            </p>
+        </div>
+        <div style={{ fontSize: "0.75rem", opacity: 0.5, fontFamily: 'monospace', letterSpacing: '0.05em' }}>
+            TypeScript • React 19 • Performance Optimization
+        </div>
+    </div>
 
-                        </div>
+    {/* Project 3: CollegeConnect */}
+    <div style={{ 
+        flex: '1 1 280px',
+        minWidth: 0,
+        background: 'rgba(255, 255, 255, 0.03)', 
+        border: '1px solid rgba(255, 255, 255, 0.08)',
+        padding: 'clamp(16px, 3vw, 24px)', 
+        borderRadius: '16px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    }}>
+        <div>
+            <h4 style={{ margin: "0 0 8px 0", fontSize: "clamp(1.1rem, 2vw, 1.3rem)", fontWeight: 600, letterSpacing: '-0.02em' }}>
+                CollegeConnect
+            </h4>
+            <p style={{ fontSize: "clamp(0.85rem, 1.5vw, 0.95rem)", opacity: 0.8, lineHeight: '1.5', marginBottom: "16px" }}>
+                A comprehensive academic management platform featuring an integrated file drive and automated web-scraping utilities for streamlined portal sync.
+            </p>
+        </div>
+        <div style={{ fontSize: "0.75rem", opacity: 0.5, fontFamily: 'monospace', letterSpacing: '0.05em' }}>
+            MongoDB • Express • React • Node.js • Puppeteer
+        </div>
+    </div>
+
+    {/* Project 4: Epistemic */}
+    <div style={{ 
+        flex: '1 1 280px',
+        minWidth: 0,
+        background: 'rgba(255, 255, 255, 0.03)', 
+        border: '1px solid rgba(255, 255, 255, 0.08)',
+        padding: 'clamp(16px, 3vw, 24px)', 
+        borderRadius: '16px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    }}>
+        <div>
+            <h4 style={{ margin: "0 0 8px 0", fontSize: "clamp(1.1rem, 2vw, 1.3rem)", fontWeight: 600, letterSpacing: '-0.02em' }}>
+                Epistemic
+            </h4>
+            <p style={{ fontSize: "clamp(0.85rem, 1.5vw, 0.95rem)", opacity: 0.8, lineHeight: '1.5', marginBottom: "16px" }}>
+                A modern platform engineered to optimize digital resource discovery and enhance direct peer collaboration across campus environments.
+            </p>
+        </div>
+        <div style={{ fontSize: "0.75rem", opacity: 0.5, fontFamily: 'monospace', letterSpacing: '0.05em' }}>
+            Next.js • TypeScript • Tailwind CSS
+        </div>
+    </div>
+
+</div>
                     </div>
 
                     {/* 5. CONTACT */}
@@ -347,6 +429,8 @@ export default function TheNewSkill() {
 
 const getServiceItemStyle = (isActive) => ({
     ...styles.serviceItem,
+    flex: '1 1 280px',
+    minWidth: 0,
     opacity: isActive ? 1 : 0.62,
     transform: `scale(${isActive ? 1 : 0.965})`,
     filter: isActive ? "blur(0px)" : "blur(0.2px)",

@@ -111,8 +111,8 @@
 
 @media (max-width: 768px) {
     .tns-service-item {
-        min-height: 40vh !important;
-        padding: 1.5rem 0 !important;
+        min-height: auto !important;
+        padding: 2.5rem 0 !important;
     }
 
     .tns-layout {
@@ -132,8 +132,8 @@
 
 @media (max-width: 480px) {
     .tns-service-item {
-        min-height: 34vh !important;
-        padding: 1.5rem 0 !important;
+        min-height: auto !important;
+        padding: 2rem 0 !important;
     }
 
     .tns-rightSticky {
