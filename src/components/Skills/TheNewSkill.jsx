@@ -188,7 +188,6 @@ export default function TheNewSkill() {
 
                     {/* 3. DETAILED SKILL SECTIONS (Scroll Triggers) */}
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
                         <div
                             className={`tns-service-item ${activeSkillIndex === 0 ? "is-active" : ""}`}
                             data-skill-index="0"
@@ -210,7 +209,6 @@ export default function TheNewSkill() {
                                 Leveraging <strong>Node.js, Express, and PostgreSQL</strong> to build scalable backend systems. I focus on clean API design, authentication, and database optimization and many more.
                             </p>
                         </div>
-                    </div>
 
                     <div
                         className={`tns-service-item ${activeSkillIndex === 2 ? "is-active" : ""}`}

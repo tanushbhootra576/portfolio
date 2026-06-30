@@ -19,6 +19,14 @@ const projects = [
         link: "https://epistemic-lac.vercel.app/",
         github: "" 
     },
+    {
+        title: "TheSuperRAG",
+        description: "A privacy-first AI assistant with literal amnesia. It processes files locally in-memory, actively self-corrects to eliminate hallucinations, and supports BYOK (Groq, OpenAI, Anthropic). Built without heavy PyTorch dependencies using FastEmbed and LangGraph.",
+        tech: ["Python", "FastEmbed", "LangGraph", "LLMs"],
+        image: "/imgs/TheSuperRAG.webp",
+        link: "https://the-super-rag.vercel.app/",
+        github: "https://github.com/tanushbhootra576/TheSuperRAG"
+    },
  
     {
         title: "use-web-kit",
@@ -35,14 +43,6 @@ const projects = [
         image: "/imgs/CampusConnect.webp",
         link: "https://studentverse-amber.vercel.app/",
         github: "https://github.com/tanushbhootra576/camp.git"
-    },
-    {
-        title: "GridSaga",
-        description: "A 3D logic puzzle game combining core mechanics of 2048 with spatial Rubik's Cube rotations, featuring modular state management and procedural level generation.",
-        tech: ["Next.js", "TypeScript", "Three.js", "React Three Fiber", "TailwindCSS"],
-        image: "/imgs/GridSaga.webp",
-        link: "https://grid-saga.vercel.app/",
-        github: "https://github.com/tanushbhootra576/GridSaga.git"
     },
     {
         title: "JurisAI",

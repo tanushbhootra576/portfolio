@@ -11,6 +11,11 @@ const projects = [
         image: "/imgs/WeatherApp.webp"
     },
     {
+        title: "TheSuperRAG",
+        link: "https://the-super-rag.vercel.app/",
+        image: "/imgs/TheSuperRAG.webp"
+    },
+    {
         title: "VoxMotion",
         link: "",
         image: "/imgs/voxmotion.webp"
@@ -24,11 +29,6 @@ const projects = [
         title: "CampusConnect",
         link: "https://studentverse-amber.vercel.app/",
         image: "/imgs/CampusConnect.webp"
-    },
-    {
-        title: "GridSaga",
-        link: "https://grid-saga.vercel.app/",
-        image: "/imgs/GridSaga.webp"
     },
     {
         title: "JurisAI",
