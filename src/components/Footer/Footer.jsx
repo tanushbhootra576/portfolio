@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import "./Footer.css";
 import { safeHref } from '../../utils/url';
 
-const DEFAULT_RESUME_URL = "https://drive.google.com/file/d/1Msrl20xyCZGcOGclcvqkR9M_yVVZvdCq/view?usp=sharing";
+const DEFAULT_RESUME_URL = "https://drive.google.com/file/d/1MoeEJjTef38_wZxtXGnW9HJ3YULP9r7n/view?usp=sharing";
 
 const Footer = ({ resumeUrl = (import.meta.env?.VITE_RESUME_URL ?? DEFAULT_RESUME_URL) }) => {
     const safeResumeUrl = safeHref(resumeUrl, { allowRelative: true });

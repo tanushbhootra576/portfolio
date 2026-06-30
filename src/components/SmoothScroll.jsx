@@ -17,8 +17,10 @@ const SmoothScroll = ({ children }) => {
         gsap.registerPlugin(ScrollTrigger);
 
         const lenis = new Lenis({
-            smooth: true,
-            duration: 1.2,
+            lerp: 0.08,
+            wheelMultiplier: 0.9,
+            smoothWheel: true,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         });
 
         lenis.on("scroll", ScrollTrigger.update);
